@@ -4,18 +4,25 @@ import { useParams } from 'react-router-dom';
 
 const filmes = [{
     "nome": "Vingadores",
+    "duracao": "2H30",
+    "foto": "vingadores.png",
+    "ano": 2010,
     "genero": "Ação/Nerd",
     "descricao": "Filme da Marvel com super-heróis",
     "nota": 5
 },
 {
     "nome": "Vingadores 2",
+    "duracao": "2H30",
+    "ano": 2014,
     "genero": "Ação/Nerd",
     "descricao": "Filme da Marvel com super-heróis",
     "nota": 5
 },
 {
     "nome": "Vingadores 3",
+    "duracao": "2H30",
+    "ano": 2015,
     "genero": "Ação/Nerd",
     "descricao": "Filme da Marvel com super-heróis",
     "nota": 5
@@ -25,36 +32,88 @@ const filmes = [{
 
 function Detalhes() {
     const { filme } = useParams();
-
     return (
         <div>
-            <p>Filme: {filme}</p>
-            {(() => {
-                if (filme == 'Vingadores') {
+            {filmes.map((movie, i) => {
+                if (filme == movie.nome) {
                     return (
-                        <div>
-                            <p>{filmes[0].descricao}</p>
-                            <p>{filmes[0].genero}</p>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-8">
+                                    <img src={'/assets/images/' + movie.foto} alt={movie.nome} className="card-img-top" />
+                                </div>
+
+                                <div className='col'>
+                                    <div class="card">
+                                        <div class="card-header">
+                                            Filme: {movie.nome}
+                                        </div>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">duracao: {movie.duracao}</li>
+                                            <li class="list-group-item">Ano: {movie.ano}</li>
+                                            <li class="list-group-item">genero: {movie.genero}</li>
+                                            <li class="list-group-item">Sinopse: {movie.descricao}</li>
+                                            <li class="list-group-item">Pontuação: {movie.nota}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     )
-                } else if (filme == 'Vingadores 2') {
+                } else if (filme == movie.nome) {
                     return (
-                        <div>
-                            <p>{filmes[1].descricao}</p>
-                            <p>{filmes[1].genero}</p>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-8">
+                                    <img src={'/assets/images/' + movie.foto} alt={movie.nome} className="card-img-top" />
+                                </div>
+
+                                <div className='col'>
+                                    <div class="card">
+                                        <div class="card-header">
+                                            Filme: {movie.nome}
+                                        </div>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">duracao: {movie.duracao}</li>
+                                            <li class="list-group-item">Ano: {movie.ano}</li>
+                                            <li class="list-group-item">genero: {movie.genero}</li>
+                                            <li class="list-group-item">Sinopse: {movie.descricao}</li>
+                                            <li class="list-group-item">Pontuação: {movie.nota}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     )
                 } else {
                     return (
-                        <div>
-                            <p>{filmes[2].descricao}</p>
-                            <p>{filmes[2].genero}</p>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-8">
+                                    <img src={'/assets/images/' + movie.foto} alt={movie.nome} className="card-img-top" />
+                                </div>
+
+                                <div className='col'>
+                                    <div class="card">
+                                        <div class="card-header">
+                                            Filme: {movie.nome}
+                                        </div>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">duracao: {movie.duracao}</li>
+                                            <li class="list-group-item">Ano: {movie.ano}</li>
+                                            <li class="list-group-item">genero: {movie.genero}</li>
+                                            <li class="list-group-item">Sinopse: {movie.descricao}</li>
+                                            <li class="list-group-item">Pontuação: {movie.nota}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     )
                 }
-            })()}
+            })}
             <Footer />
-        </div>
+        </div >
     )
 }
 
