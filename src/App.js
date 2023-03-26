@@ -4,6 +4,7 @@ import Planos from './pages/planos';
 import Sobre from './pages/sobre';
 import Detalhes from './pages/detalhes';
 import Title from './components/Title/index';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
         <Route path='detalhes/:filme' element={<Detalhes />} />
         <Route path='*' element={<h1>Página Não Encontrada!</h1>} />
       </Routes>
+      <Footer />
     </Router>
   );
 }

@@ -14,6 +14,7 @@ const filmes = [{
 {
     "nome": "Vingadores 2",
     "duracao": "2H30",
+    "foto": "vingadores.png",
     "ano": 2014,
     "genero": "Ação/Nerd",
     "descricao": "Filme da Marvel com super-heróis",
@@ -22,6 +23,7 @@ const filmes = [{
 {
     "nome": "Vingadores 3",
     "duracao": "2H30",
+    "foto": "vingadores.png",
     "ano": 2015,
     "genero": "Ação/Nerd",
     "descricao": "Filme da Marvel com super-heróis",
