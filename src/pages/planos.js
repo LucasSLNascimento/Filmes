@@ -28,7 +28,7 @@ function Planos() {
 
         <div className="container text-center">
             <div class="custom-title p-3 pb-md-4 mx-auto text-center">
-                <h1 class="display-4 fw-normal">Planos</h1>
+                <h1 class="display-5 fw-normal">Planos</h1>
             </div>
 
             <div class="row">
